@@ -137,7 +137,7 @@ pub fn local_testnet_config() -> Result<ChainSpec, String> {
 }
 
 pub fn clueconn_config() -> Result<ChainSpec, String> {
-    ChainSpec::from_json_bytes(&include_bytes!("../res/subsocial.json")[..])
+    ChainSpec::from_json_bytes(&include_bytes!("../res/clueconn.json")[..])
 }
 
 pub fn clueconn_staging_config() -> Result<ChainSpec, String> {
