@@ -150,55 +150,61 @@ pub fn clueconn_staging_config() -> Result<ChainSpec, String> {
         move || {
             testnet_genesis(
                 wasm_binary,
-                vec![(
+                vec![
+                (
                     /* AuraId SR25519 */
-                    hex!["3ec03f51f26595e34a4139e462c8a9f8e8cc0554fafcb511a638e8b944f14b77"]
-                        .unchecked_into(),
+                    hex!["8eb5da0628336e262bf6b479b67e69abba4f0f34574362a0811a0540dae1dc76"].unchecked_into(),
                     /* GrandpaId ED25519 */
-                    hex!["d1458af9072f340f0699dd34d588d939c6988dd4d4c3fa5cf3009ae1090be5e6"]
-                        .unchecked_into(),
-                )],
-                /* Sudo Account */
-                hex!["ca22e5d8cd577003036ef61e58a6f4d37932d3ecb4be0a19cc1b98a0cff66f67"].into(),
+                    hex!["f879f1280531c9fbbf748cb51f6fd8db1dbfc9c6403c71629ccfe67f13edfd07"].unchecked_into()
+                ),
+                (
+                    /* AuraId SR25519 */
+                    hex!["4078333251614a09d3e450c8651609fdb8e7886b134e1c892f19cbabf7275c0e"].unchecked_into(),
+                    /* GrandpaId ED25519 */
+                    hex!["58058e7d56ad185dca7a0d8295066e2707c69f31c1b2065b71221dec62c90017"].unchecked_into()
+                ),
+            ],
+            /*Sudo account */
+                hex!["f0f16440ffde4a4da023e1d09767b2a829425b45df601e4b3de9012f4b9ac82b"].into(),
                 vec![
                     (
                         /* Sudo Account */
-                        hex!["ca22e5d8cd577003036ef61e58a6f4d37932d3ecb4be0a19cc1b98a0cff66f67"]
+                        hex!["f0f16440ffde4a4da023e1d09767b2a829425b45df601e4b3de9012f4b9ac82b"]
                             .into(),
                         /* Balance */
                         1_000,
                     ),
                     (
                         /* Account X1 */
-                        hex!["3e0ecea13eddef0e9b21dce9292f8cdd0c1d837a9060d22c4f4f84e80b215371"]
+                        hex!["88ed33779dc098f0a7d9110e180c61cc1e138b45eaab18a97f4bf2f9bebba975"]
                             .into(),
                         /* Balance */
                         2_499_000,
                     ),
                     (
                         /* Account X2 */
-                        hex!["ee9ba776c9ce8bfa501bce9aa7c57fd0d2959a4baa665bfb96ab865a8281825d"]
+                        hex!["1c9ed9230f585b6a933a975307d652c3316394063b844c93ce1eef8f5babc94a"]
                             .into(),
                         /* Balance */
                         2_500_000,
                     ),
                     (
                         /* Account X3 */
-                        hex!["98db5cb04f40a5f4fd1db7d4046cacb1610747734680d99f8186a38c2b6dae4d"]
+                        hex!["88cea449161f633299b8c8da4744ce4939a7bd19318b867f8982c1d039ee3c56"]
                             .into(),
                         /* Balance */
                         2_500_000,
                     ),
                     (
                         /* Account X4 */
-                        hex!["aab402f03007e08560e8e16b563639f4276a069026d17c403a5ec8af15230b29"]
+                        hex!["e079cfec8049d8819c93398b93f11145f1d3b6b324757d577d063e9842f10002"]
                             .into(),
                         /* Balance */
                         2_500_000,
                     ),
                 ],
                 // Treasury
-                hex!["569531aaa8b014bb10e99af2c6f8b9ced581eaac1714dbc6b86f9c7ac8a59e58"].into(),
+                hex!["be3f8f4faf72a1ea70b4a3c0ba57127d82c84b12f75f24bc4614411c4244b230"].into(),
                 true,
             )
         },
